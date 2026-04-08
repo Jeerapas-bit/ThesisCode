@@ -30,7 +30,7 @@ const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
           {/* Character Silhouettes */}
           <div className="w-full md:w-1/2 flex justify-center">
             <img 
-              src="/Silhouette The Tools.png" 
+              src="/Silhouette-The-Tools.png" 
               alt="The Tools Silhouettes" 
               className="w-full max-w-md object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]" 
             />
@@ -63,7 +63,7 @@ const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
         >
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: 'url("/Background Story in Home-Page.jpg")' }}
+            style={{ backgroundImage: 'url("/Background-Story-in-Home-Page.jpg")' }}
           ></div>
           {/* Dark overlay for better text readability */}
           <div className="absolute inset-0 bg-black/60"></div>

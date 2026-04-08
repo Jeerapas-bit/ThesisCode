@@ -5,28 +5,28 @@ const Characters = () => {
     { 
       name: 'The Brawler', 
       color: 'bg-[#d81b60]', 
-      image: '/MC 1.png', 
+      image: '/MC-1.png', 
       imageClass: 'object-cover object-[50%_10%]',
       desc: 'นักเลงประจำถิ่นที่คอยไล่หวดคนที่มีปัญหากับเขา หรือครอบครัวของเขา และเคยมีปัญหากับแก๊งมาเฟีย ที่จะมายึดพื้นที่ของเขา แม้เขาจะแพ้ แต่ความแค้น และความเลือดเย็นนี้ ก็ได้ไปตบตาของ ผู้มอบหมายนิรนาม',
     },
     { 
       name: 'The Rider', 
       color: 'bg-[#1976d2]', 
-      image: '/MC 2.png', 
+      image: '/MC-2.png', 
       imageClass: 'object-cover object-[50%_20%]',
       desc: 'นักบิดที่เคยมีปัญหากับแก๊งมาเฟีย จึงได้รับผลกระทบจากเหล่ามาเฟียทำให้ถูกขโมยทรัพย์สินจำนวนหนึ่งไป จึงมีความเคียดแค้นต่อแก๊งมาเฟียเป็นอย่างมากจนเรื่องนี้ได้ไปถึงหูของ ผู้มอบหมายนิรนาม',
     },
     { 
       name: 'The Officer', 
       color: 'bg-[#e64a19]', 
-      image: '/MC 3.png', 
+      image: '/MC-3.png', 
       imageClass: 'object-cover object-[50%_10%]',
       desc: 'อดีตตำรวจที่ละทิ้งองค์กร เนื่องจากรู้ว่าองค์กรมีการร่วมมือกันกับแก๊งมาเฟีย เขาจึงเลือกที่จะออกมาและจัดการเรื่องต่างๆ ด้วยตัวเอง แม้จะเป็นวิธีที่ไม่ถูกต้องก็ตาม และเรื่องนี้ได้ไปถึง ผู้มอบหมายนิรนาม',
     },
     { 
       name: 'The Hitman', 
       color: 'bg-[#5e35b1]', 
-      image: '/MC 4.png', 
+      image: '/MC-4.png', 
       imageClass: 'object-cover object-[50%_10%]',
       desc: 'มือปืนรับจ้างอิสระที่คอยรับงานจากผู้มีอำนาจ เขาได้วางมือจากวงการไปแล้ว แต่สิ่งที่เขาเคยทำเอาไว้ได้กลับมาทำร้ายเขาผ่านแก๊งมาเฟีย เขาได้สูญเสียสิ่งรอบข้างไป จึงทำให้เขาต้องกลับมาจับปืนอีกครั้ง จึงเป็นเป้าหมายตาของ ผู้มอบหมายนิรนาม',
     },
@@ -43,35 +43,35 @@ const Characters = () => {
     { 
       name: 'The Savage Fist', 
       color: 'bg-[#880e4f]', 
-      image: '/Boss 1.png', 
+      image: '/Boss-1.png', 
       imageClass: 'object-cover object-[50%_10%]',
       desc: 'มือขวาขององค์กร ที่มักใช้กำปั้นแก้ปัญหา',
     },
     { 
       name: 'The Mad Boy', 
       color: 'bg-[#b71c1c]', 
-      image: '/Boss 2.png', 
+      image: '/Boss-2.png', 
       imageClass: 'object-cover object-[50%_10%]',
       desc: 'บอสหน้าใหม่ที่คอยควบคุมเรื่องสารเสพติดในองค์กร',
     },
     { 
       name: 'The Blade', 
       color: 'bg-[#880e4f]', 
-      image: '/Boss 3.png', 
+      image: '/Boss-3.png', 
       imageClass: 'object-cover object-[50%_10%]',
       desc: 'นักดาบประจำองค์กร มีฝีมือที่ร้ายกาจและเป็นที่หน้าเกรงขาม',
     },
     { 
       name: 'The Commander', 
       color: 'bg-[#b71c1c]', 
-      image: '/Boss 4.png', 
+      image: '/Boss-4.png', 
       imageClass: 'object-cover object-[50%_10%]',
       desc: 'ผู้บัญชาการคำสั่งต่างๆ และเป็นหัวแถวในการออกภารกิจ',
     },
     { 
       name: 'The Father', 
       color: 'bg-[#880e4f]', 
-      image: '/Boss 5.png', 
+      image: '/Boss-5.png', 
       imageClass: 'object-cover object-[50%_10%]',
       desc: 'บอสแห่งองค์กรแห่งนี้ และเป็นผู้อยู่เบื้องหลังคำสั่งต่างๆ',
     },
@@ -94,7 +94,7 @@ const Characters = () => {
         {/* The Tools */}
         <div className="w-full md:w-1/2 flex flex-col">
           <div className="w-full flex justify-center items-end h-80 md:h-[500px]">
-            <img src="/The Tools Team-01.png" alt="The Tools Team" className="h-full object-contain object-bottom" />
+            <img src="/The-Tools-Team-01.png" alt="The Tools Team" className="h-full object-contain object-bottom" />
           </div>
           <div className="w-full flex-1 bg-[#d81b60] py-8 px-6 text-center flex flex-col items-center">
             <h2 className="font-heading text-4xl md:text-5xl text-white mb-2">The Tools</h2>
@@ -108,7 +108,7 @@ const Characters = () => {
         {/* Mafia */}
         <div className="w-full md:w-1/2 flex flex-col">
           <div className="w-full flex justify-center items-end h-80 md:h-[500px]">
-            <img src="/Mafia Team-01.png" alt="Mafia Team" className="h-full object-contain object-bottom" />
+            <img src="/Mafia-Team-01.png" alt="Mafia Team" className="h-full object-contain object-bottom" />
           </div>
           <div className="w-full flex-1 bg-[#b71c1c] py-8 px-6 text-center flex flex-col items-center">
             <h2 className="font-heading text-4xl md:text-5xl text-white mb-2">Mafia</h2>

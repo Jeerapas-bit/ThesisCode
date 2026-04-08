@@ -6,43 +6,43 @@ const Cards = () => {
       title: 'Characters Card',
       desc: 'การ์ดตัวละครที่บ่งบอกสถานะ และสกิลของตัวละคร ในการประกอบการเล่นและวางแผนของแต่ละตัวละคร',
       color: 'text-red-500',
-      image: '/Characters Cards.png',
+      image: '/Characters-Cards.png',
     },
     {
       title: 'Skill Card',
       desc: 'การ์ดสกิลที่ใช้สำหรับเล่นเพื่อส่งผลออกเป็น 1 ประเภท',
       color: 'text-red-400',
-      image: '/All Skill Cards.png',
+      image: '/All-Skill-Cards.png',
     },
     {
       title: 'Active Card',
       desc: 'การ์ดประเภทใช้งาน ที่เมื่อใช้แล้วจะแสดงผลทันที',
       color: 'text-pink-500',
-      image: '/Active Cards.png',
+      image: '/Active-Cards.png',
     },
     {
       title: 'Passive Card',
       desc: 'การ์ดที่แสดงผลถาวร หรือกำหนดเงื่อนไขในการใช้',
       color: 'text-blue-400',
-      image: '/Passive Cards.png',
+      image: '/Passive-Cards.png',
     },
     {
       title: 'Debuff Card',
       desc: 'การ์ดแสดงผลด้านลบ',
       color: 'text-purple-500',
-      image: '/Debuff Cards.png',
+      image: '/Debuff-Cards.png',
     },
     {
       title: 'Weapon Card',
       desc: 'การ์ดอาวุธที่ช่วยเพิ่มระยะการโจมตี หรือความสามารถในการโจมตีของตัวละครให้แข็งแกร่งขึ้น',
       color: 'text-green-500',
-      image: '/Weapons Cards.png',
+      image: '/Weapons-Cards.png',
     },
     {
       title: 'Mission Card',
       desc: 'การ์ดภารกิจเฉพาะของ The Tools ที่ต้องทำตามภารกิจ เพื่อเป็นผู้ชนะ',
       color: 'text-yellow-500',
-      image: '/Mission Cards.png',
+      image: '/Mission-Cards.png',
     },
   ];
 
@@ -57,7 +57,7 @@ const Cards = () => {
           <h1 className="relative z-10 font-heading text-5xl md:text-7xl text-white drop-shadow-lg mb-8">Cards</h1>
           {/* Cards Group Image */}
           <div className="relative z-10 w-11/12 md:w-full flex items-center justify-center transform rotate-[-5deg] mt-2">
-            <img src="/All Cards.png" alt="All Cards" className="w-full h-auto object-contain drop-shadow-2xl scale-110 md:scale-125" />
+            <img src="/All-Cards.png" alt="All Cards" className="w-full h-auto object-contain drop-shadow-2xl scale-110 md:scale-125" />
           </div>
         </div>
         <p className="text-lg md:text-xl text-gray-300 text-center max-w-2xl">
