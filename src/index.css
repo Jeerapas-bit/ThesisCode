@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Righteous&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-kanit: "Kanit", sans-serif;
+  --font-righteous: "Righteous", cursive;
+  --color-synth-bg: #0a0a16;
+  --color-synth-pink: #ff2a6d;
+  --color-synth-cyan: #05d9e8;
+  --color-synth-yellow: #ffc200;
+  --color-synth-purple: #7000ff;
+}
+
+body {
+  background-color: var(--color-synth-bg);
+  color: white;
+  font-family: var(--font-kanit);
+}
+
+.font-heading {
+  font-family: var(--font-righteous);
+}
+
+.synth-text-glow {
+  text-shadow: 0 0 5px rgba(255, 42, 109, 0.8), 0 0 10px rgba(255, 42, 109, 0.5);
+}
+
+.synth-cyan-glow {
+  text-shadow: 0 0 5px rgba(5, 217, 232, 0.8), 0 0 10px rgba(5, 217, 232, 0.5);
+}
+
+.sunset-gradient {
+  background: linear-gradient(180deg, #ffc200 0%, #ff7e67 30%, #ff2a6d 70%, #7000ff 100%);
+}
+
+.placeholder-img {
+  background-color: #1f1f3a;
+  border: 2px dashed #ff2a6d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff2a6d;
+  font-weight: bold;
+}
