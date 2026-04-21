@@ -1,45 +1,7 @@
 import React from 'react';
+import { motion } from 'motion/react';
 
 const Gameplay = () => {
-  const howToPlaySteps = [
-    { 
-      title: 'ประกอบกระดาน', 
-      desc: 'ประกอบกระดานขนาดย่อม พร้อมเลือกตัวละครของคุณ',
-      color: 'bg-[#0088cc]',
-      image: '/HowTo1.png'
-    },
-    { 
-      title: 'การแอคชั่น', 
-      desc: 'เลือกจุดเกิดและพร้อมความสามารถทั้งหมดในการเดินเกมของคุณ จะมุ่งหน้า หรือเก็บทรัพยากร',
-      color: 'bg-[#d81b60]', 
-      image: '/HowTo2.png' 
-    },
-    { 
-      title: 'เทิร์นศัตรู', 
-      desc: 'เมื่อเทิร์นผู้เล่นจบลง ก็ถึงคราวของเทิร์นศัตรู เป้าหมายเดียวของพวกเขาคือการกำจัดคุณ',
-      color: 'bg-[#b71c1c]', 
-      image: '/HowTo3.png' 
-    },
-    { 
-      title: 'การโจมตีและกำจัด', 
-      desc: 'ใช้การทอยในการกำจัด และสามารถเลือกอาวุธของศัตรูที่คุณพึ่งกำจัดไปได้',
-      color: 'bg-[#6a1b9a]', 
-      image: '/HowTo4.png' 
-    },
-    { 
-      title: 'แอคชั่นการ์ด', 
-      desc: 'การ์ดที่เก็บมาได้นั้นสำคัญ ใช้มันเพื่อเพิ่มโอกาสการเอาตัวรอดของคุณ',
-      color: 'bg-[#2e7d32]', 
-      image: '/HowTo5.png' 
-    },
-    { 
-      title: 'เป้าหมายการชนะ', 
-      desc: 'มุ่งหาไปรับภารกิจ และลุล่วงเพื่อปิดฉากเกมนี้',
-      color: 'bg-[#fbc02d]', 
-      image: '/HowTo6.png' 
-    },
-  ];
-
   return (
     <div className="flex flex-col items-center w-full">
       {/* Header */}
@@ -77,44 +39,158 @@ const Gameplay = () => {
 
       {/* How To Play */}
       <div className="w-full">
-        <div className="w-full max-w-5xl mx-auto px-4 mb-8">
-          <h2 className="font-heading text-4xl md:text-5xl text-synth-pink synth-text-glow text-left">How To Play</h2>
+        <div className="w-full max-w-5xl mx-auto px-4 mb-8 md:mb-12">
+          <h2 className="font-heading text-5xl md:text-6xl text-synth-pink synth-text-glow text-center">How To Play</h2>
         </div>
-        <div className="flex flex-col w-full">
-          {howToPlaySteps.map((step, index) => {
-            const hasHoverContent = step.image || step.desc;
-            
-            return (
-              <div 
-                key={index} 
-                className={`group relative w-full h-48 md:h-[400px] flex items-center justify-center overflow-hidden ${step.color} cursor-pointer`}
-              >
-                {/* Default State */}
-                <div className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ease-out z-10 ${hasHoverContent ? 'group-hover:opacity-0 group-hover:scale-95' : ''}`}>
-                  <h3 className="text-3xl md:text-5xl font-bold text-white drop-shadow-md">{step.title}</h3>
-                </div>
 
-                {/* Hover State */}
-                {hasHoverContent && (
-                  <div className="absolute inset-0 flex flex-col md:flex-row items-center justify-center opacity-0 transition-all duration-500 ease-out group-hover:opacity-100 z-20 p-4 md:p-12 gap-4 md:gap-12">
-                    {/* Image */}
-                    {step.image && (
-                      <div className="w-full md:w-1/2 h-full flex items-center justify-center transform -translate-x-8 transition-transform duration-500 ease-out group-hover:translate-x-0">
-                        <img src={step.image} alt={step.title} className="max-h-full object-contain drop-shadow-2xl" />
-                      </div>
-                    )}
-                    
-                    {/* Text */}
-                    <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left transform translate-y-4 md:-translate-x-8 md:translate-y-0 transition-transform duration-500 ease-out group-hover:translate-x-0 group-hover:translate-y-0">
-                      <h3 className="text-3xl md:text-5xl font-bold text-white drop-shadow-md mb-2 md:mb-4">{step.title}</h3>
-                      {step.desc && <p className="text-base md:text-2xl text-white/90 font-light">{step.desc}</p>}
-                    </div>
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-10%" }}
+          transition={{ duration: 0.8 }}
+          className="w-full relative h-[450px] md:h-[600px] flex flex-col md:flex-row items-center mb-8"
+        >
+          {/* Image side with fade-out mask */}
+          <div className="w-full md:w-[60%] h-1/2 md:h-full relative overflow-hidden">
+            <img 
+              src="/Sample_Gameplay_Crop1-01.png" 
+              alt="ประกอบกระดาน และ การแอคชั่น" 
+              className="absolute inset-0 w-full h-full object-cover object-left md:object-[center_30%]"
+            />
+            {/* Fade out to the right for desktop */}
+            <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-r from-transparent to-synth-bg z-10 hidden md:block pointer-events-none"></div>
+            {/* Fade out to the bottom for mobile */}
+            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-b from-transparent to-synth-bg z-10 md:hidden pointer-events-none"></div>
+          </div>
+
+          {/* Text side */}
+          <div className="w-full md:w-[40%] h-1/2 md:h-full flex flex-col justify-center px-6 py-6 md:py-0 md:pr-12 lg:pr-20 z-20 bg-synth-bg md:bg-transparent">
+            <motion.div
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="mb-8"
+            >
+              <h3 className="text-3xl md:text-5xl font-heading text-[#0088cc] drop-shadow-[0_0_10px_rgba(0,136,204,0.8)] mb-3 md:mb-4">ประกอบกระดาน</h3>
+              <p className="text-lg md:text-xl text-gray-300 font-light">
+                ประกอบกระดานขนาดย่อม พร้อมเลือกตัวละครของคุณ
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <h3 className="text-3xl md:text-5xl font-heading text-[#d81b60] drop-shadow-[0_0_10px_rgba(216,27,96,0.8)] mb-3 md:mb-4">การแอคชั่น</h3>
+              <p className="text-lg md:text-xl text-gray-300 font-light">
+                เลือกจุดเกิด ใช้ความสามารถในการเดินเกมของคุณ จะมุ่งหน้า หรือเก็บทรัพยากร
+              </p>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Group 2 */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-10%" }}
+          transition={{ duration: 0.8 }}
+          className="w-full relative h-[450px] md:h-[600px] flex flex-col md:flex-row-reverse items-center mb-8 bg-synth-bg/30"
+        >
+          {/* Image side with fade-out mask */}
+          <div className="w-full md:w-[60%] h-1/2 md:h-full relative overflow-hidden">
+            <img 
+              src="/Sample_Gameplay_Crop2-01.png" 
+              alt="เทิร์นศัตรู และ การโจมตีและการแอคชั่น" 
+              className="absolute inset-0 w-full h-full object-cover object-left md:object-[center_30%]"
+            />
+            {/* Fade out to the left for desktop */}
+            <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-l from-transparent to-synth-bg z-10 hidden md:block pointer-events-none"></div>
+            {/* Fade out to the bottom for mobile */}
+            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-b from-transparent to-synth-bg z-10 md:hidden pointer-events-none"></div>
+          </div>
+
+          {/* Text side */}
+          <div className="w-full md:w-[40%] h-1/2 md:h-full flex flex-col justify-center px-6 py-6 md:py-0 md:pl-12 lg:pl-20 z-20 bg-synth-bg md:bg-transparent">
+            <motion.div
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="mb-8"
+            >
+              <h3 className="text-3xl md:text-5xl font-heading text-[#ff3366] drop-shadow-[0_0_10px_rgba(255,51,102,0.8)] mb-3 md:mb-4">เทิร์นศัตรู</h3>
+              <p className="text-lg md:text-xl text-gray-300 font-light">
+                เมื่อเทิร์นผู้เล่นจบลง ก็ถึงคราวของเทิร์นศัตรู เป้าหมายเดียวของพวกเขาคือการกำจัดคุณ
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <h3 className="text-3xl md:text-5xl font-heading text-[#9d4edd] drop-shadow-[0_0_10px_rgba(157,78,221,0.8)] mb-3 md:mb-4">การโจมตีและการแอคชั่น</h3>
+              <p className="text-lg md:text-xl text-gray-300 font-light">
+                ใช้การทอยเต๋าในการโจมตี และสามารถเลือกอาวุธหรือไอเทมของศัตรูที่คุณเพิ่งกำจัดไปได้
+              </p>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Group 3 */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-10%" }}
+          transition={{ duration: 0.8 }}
+          className="w-full relative h-[450px] md:h-[600px] flex flex-col md:flex-row items-center mb-8"
+        >
+          {/* Image side with fade-out mask */}
+          <div className="w-full md:w-[60%] h-1/2 md:h-full relative overflow-hidden">
+            <img 
+              src="/Sample_Gameplay_Crop3-01.png" 
+              alt="แอคชั่นการ์ด และ เป้าหมายการชนะ" 
+              className="absolute inset-0 w-full h-full object-cover object-left md:object-[center_30%]"
+            />
+            {/* Fade out to the right for desktop */}
+            <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-r from-transparent to-synth-bg z-10 hidden md:block pointer-events-none"></div>
+            {/* Fade out to the bottom for mobile */}
+            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-b from-transparent to-synth-bg z-10 md:hidden pointer-events-none"></div>
+          </div>
+
+          {/* Text side */}
+          <div className="w-full md:w-[40%] h-1/2 md:h-full flex flex-col justify-center px-6 py-6 md:py-0 md:pr-12 lg:pr-20 z-20 bg-synth-bg md:bg-transparent">
+            <motion.div
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="mb-8"
+            >
+              <h3 className="text-3xl md:text-5xl font-heading text-[#00ffcc] drop-shadow-[0_0_10px_rgba(0,255,204,0.8)] mb-3 md:mb-4">แอคชั่นการ์ด</h3>
+              <p className="text-lg md:text-xl text-gray-300 font-light">
+                การ์ดที่เก็บมาได้นั้นสำคัญ ใช้มันเพื่อเพิ่มโอกาสการเอาตัวรอดของคุณ
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <h3 className="text-3xl md:text-5xl font-heading text-[#ffcc00] drop-shadow-[0_0_10px_rgba(255,204,0,0.8)] mb-3 md:mb-4">เป้าหมายการชนะ</h3>
+              <p className="text-lg md:text-xl text-gray-300 font-light">
+                มุ่งหน้าไปยังจุดรับภารกิจ และลุล่วงเป้าหมายเพื่อเป็นผู้ชนะในเกมนี้
+              </p>
+            </motion.div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
